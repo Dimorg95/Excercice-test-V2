@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title!: string;
-  description!: string;
-
-  ngOnInit() {
-    this.title = 'Test';
-    this.description = 'test de description';
+  paperApiUrl = '';
+  paperData = {
+    siren: '',
+    name: '',
+    person: '',
+    denomination: '',
+    codeNaf: '',
+  };
+  constructor(public http: HttpClient) {
+    this.readAPI('https://api.pappers.fr/v2/google').subscribe((data) => {
+      console.log(data);
+    });
   }
+
+  readAPI(URL: string) {
+    return this.http.get(URL);
+  }
+
+  ngOnInit() {}
 }

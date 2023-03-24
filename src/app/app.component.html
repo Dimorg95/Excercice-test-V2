@@ -1,21 +1,19 @@
 <mat-toolbar> <h1>Recherche d'entreprise</h1> </mat-toolbar>
+<div class="container">
+  <mat-form-field appearance="fill">
+    <mat-label>Search </mat-label>
+    <input matInput placeholder="Search country by name" />
+    <mat-icon class="search-icon" color="primary" matPrefix>search</mat-icon>
+  </mat-form-field>
 
-<div class="search-bar">
-  <input type="search" matInput placeholder="Rechercher une entreprise" />
-  <button mat-mini-fab>
-    <span class="material-symbols-outlined">search </span>
-  </button>
+  <mat-card class="container-info">
+    <mat-card-title>La sociéte //////</mat-card-title>
+    <mat-card-content
+      ><p>SIREN</p>
+      <p>Nom entreprise</p>
+      <p>Personne moral</p>
+      <p>denomination</p>
+      <p>code naf</p></mat-card-content
+    >
+  </mat-card>
 </div>
-
-<mat-card>
-  <mat-card-title>{{ this.title }}</mat-card-title>
-  <mat-card-content
-    ><p>{{ this.description }}</p>
-
-    <p>{{ this.description }}</p>
-
-    <p>{{ this.description }}</p>
-    <p>{{ this.description }}</p>
-    <p>{{ this.description }}</p></mat-card-content
-  >
-</mat-card>
