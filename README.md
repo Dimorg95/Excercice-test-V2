@@ -4,11 +4,13 @@
 
 ## Assurez vous d'etre dans le bon dossier
 
+`git clone https://github.com/Dimorg95/Excercice-test-V2.git`
+
 `npm install` (Installation de toutes les dépendances + node_modules)
 
 `ng serve` (Lancement de la page web sur le navigateur)
 
-### Le frontend sera lancer a l'adresse : **http://localhost:4200/**
+### La page web sera lancer a l'adresse : **http://localhost:4200/**
 
 # Fonctionnalités disponibles
 
