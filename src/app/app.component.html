@@ -1,19 +1,38 @@
-<mat-toolbar> <h1>Recherche d'entreprise</h1> </mat-toolbar>
+<h1>Recherche d'entreprise</h1>
 <div class="container">
-  <mat-form-field appearance="fill">
-    <mat-label>Search </mat-label>
-    <input matInput placeholder="Search country by name" />
-    <mat-icon class="search-icon" color="primary" matPrefix>search</mat-icon>
-  </mat-form-field>
-
-  <mat-card class="container-info">
-    <mat-card-title>La sociéte //////</mat-card-title>
-    <mat-card-content
-      ><p>SIREN</p>
-      <p>Nom entreprise</p>
-      <p>Personne moral</p>
-      <p>denomination</p>
-      <p>code naf</p></mat-card-content
-    >
-  </mat-card>
+  <!-- Barre de recherche -->
+  <div class="container-bar">
+    <input
+      type="text"
+      placeholder="Recherchez les informations d'une entreprise"
+      [(ngModel)]="searchSociety"
+      (keydown.enter)="search()"
+    />
+    <button type="submit" (click)="search()">
+      <img src="../assets/images/find-in-the-world.png" alt="" />
+    </button>
+  </div>
+  <!-- Toute les cartes de sociétés -->
+  <div class="container-society">
+    <mat-card class="container-info" *ngFor="let paper of allPaperData">
+      <mat-card-title>Société</mat-card-title>
+      <mat-card-content
+        ><p>
+          Nom d'entreprise: <span>{{ paper.name }}</span>
+        </p>
+        <p>
+          Numéro de siren: <span>{{ paper.siren }}</span>
+        </p>
+        <p>
+          Code Naf: <span>{{ paper.codeNaf }}</span>
+        </p>
+        <p>
+          Denomination: <span>{{ paper.denomination }}</span>
+        </p>
+        <p>
+          Personne moral: <span>{{ paper.person }}</span>
+        </p></mat-card-content
+      >
+    </mat-card>
+  </div>
 </div>

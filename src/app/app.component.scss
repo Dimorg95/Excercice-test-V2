@@ -1,34 +1,119 @@
-mat-toolbar {
-  height: 5rem;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5rem;
-  background-color: rgb(167, 227, 238);
+h1 {
+  text-align: center;
+  margin: 5rem 0;
 }
+
 .container {
   max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5rem;
 }
 
-mat-form-field {
-  width: 20rem;
+// Barre de recherche début
+.container-bar {
+  width: 38rem;
+  height: 4rem;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  padding: 1rem 1rem;
+  backdrop-filter: blur(4px);
+  margin-bottom: 3rem;
+}
+
+.container-bar input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 1.2rem 1rem;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 600;
+}
+
+::placeholder {
+  color: #3535357e;
+  font-weight: 400;
+}
+
+.container-bar button img {
+  width: 1.8rem;
+}
+
+.container-bar button {
+  border: 0;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background: #ebecf169;
+  cursor: pointer;
+}
+// Barre de recherche fin
+
+//Carte des sociétés
+.container-society {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 mat-card {
-  width: 25rem;
-  height: 25rem;
-  font-size: 10rem;
+  width: 20rem;
+  height: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  margin: 1rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 
   mat-card-title {
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
   mat-card-content {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
+    span {
+      font-weight: bold;
+    }
+  }
+}
+mat-card:hover {
+  box-shadow: 1px 14px 19px 2px rgba(0, 0, 0, 0.6);
+  transform: scale(1.1);
+}
+
+//Media queries barre de recherche
+
+@media screen and (max-width: 780px) {
+  .container-bar {
+    width: 30rem;
+  }
+  .container-bar button img {
+    width: 1.4rem;
+  }
+  .container-bar button {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container-bar {
+    width: 20rem;
+  }
+  .container-bar button img {
+    width: 1.4rem;
+  }
+  .container-bar button {
+    width: 2rem;
+    height: 2rem;
+  }
+  .container-bar input {
+    font-size: 1rem;
   }
 }
