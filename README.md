@@ -22,7 +22,7 @@
 
 - Une serie de carte représentant la/les entreprises rechercher
 
-### Information d'entreprise affichées :
+### Information d'entreprise affichée :
 
 - Nom d'entreprise
 - Numéro de siren
