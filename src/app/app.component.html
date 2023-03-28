@@ -31,7 +31,9 @@
           <span>{{ paper.denomination || "Aucune dénomination" }}</span>
         </p>
         <p>
-          Personne moral: <span>{{ paper.person }}</span>
+          Personne moral:
+          <span *ngIf="paper.person === true; else elseBlock">Oui</span
+          ><ng-template #elseBlock> <span>Non</span> </ng-template>
         </p></mat-card-content
       >
     </mat-card>
