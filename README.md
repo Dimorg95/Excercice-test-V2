@@ -1,27 +1,39 @@
-# Searchsociety
+# Recherche d'entreprise/société
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+## Lancement de la page (Via console)
 
-## Development server
+## Assurez vous d'etre dans le bon dossier
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+`npm install` (Installation de toutes les dépendances + node_modules)
 
-## Code scaffolding
+`ng serve` (Lancement de la page web sur le navigateur)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Le frontend sera lancer a l'adresse : **http://localhost:4200/**
 
-## Build
+# Fonctionnalités disponibles
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Barre de recherche en HTML/SCSS responsive
 
-## Running unit tests
+- Rechercher des informations sur les entreprises en tapant leur nom partiel ou complet
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Via ce que l'utilisateur écris dans la barre de recherche nous envoyons un appel a l'API **https://www.pappers.fr/**
 
-## Running end-to-end tests
+- Une serie de carte représentant la/les entreprises rechercher
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Information d'entreprise affichées :
 
-## Further help
+- Nom d'entreprise
+- Numéro de siren
+- Code Naf
+- Dénomination
+- Personne moral
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Possibilité de modifier l'url de la requete API
+
+- Rendez vous dans le fichier app.component.ts
+
+- Allez a la fonction search()
+
+- Modifier l'appel API : (this.papperUrl + search +"&longueur=20")
+
+- Le parametre longueur accepte une valeur jusqu'a 100

@@ -4,7 +4,7 @@
   <div class="container-bar">
     <input
       type="text"
-      placeholder="Recherchez les informations d'une entreprise"
+      placeholder="Ecrivez un nom de société"
       [(ngModel)]="searchSociety"
       (keydown.enter)="search()"
     />
@@ -27,7 +27,8 @@
           Code Naf: <span>{{ paper.codeNaf }}</span>
         </p>
         <p>
-          Denomination: <span>{{ paper.denomination }}</span>
+          Denomination:
+          <span>{{ paper.denomination || "Aucune dénomination" }}</span>
         </p>
         <p>
           Personne moral: <span>{{ paper.person }}</span>
